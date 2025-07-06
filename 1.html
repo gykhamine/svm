@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sovemac Oyo – Matériaux de construction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a1323; /* très sombre bleu */
+      color: #cbd5e1; /* gris clair */
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    a {
+      color: #3ddc97; /* vert turquoise */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #25b579;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* HEADER NAV */
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid #112240;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: #0a1323cc; /* semi-transparent */
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #3ddc97;
+      letter-spacing: 3px;
+      user-select: none;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    nav li {
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 5px 10px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    nav li:hover {
+      background: #3ddc9720;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      margin-bottom: 60px;
+    }
+    .hero-bg {
+      position: absolute;
+      top: -20%;
+      left: -20%;
+      width: 140%;
+      height: 140%;
+      background: linear-gradient(135deg, #3ddc97 0%, #0a1323 60%);
+      clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+      filter: blur(80px);
+      opacity: 0.7;
+      z-index: 0;
+      animation: pulse 6s ease-in-out infinite alternate;
+    }
+    @keyframes pulse {
+      0% {opacity: 0.7;}
+      100% {opacity: 0.5;}
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      color: #e0f2f1;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.7);
+    }
+    .hero-content h1 {
+      font-size: 3.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      line-height: 1.1;
+    }
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+    }
+    .btn-primary {
+      background: #3ddc97;
+      color: #0a1323;
+      font-weight: 700;
+      padding: 14px 48px;
+      border-radius: 50px;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 8px 20px rgba(61,220,151,0.5);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: #25b579;
+      box-shadow: 0 12px 25px rgba(37,181,121,0.7);
+    }
+
+    /* PRODUITS */
+    #produits {
+      padding-bottom: 80px;
+    }
+    #produits h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      color: #3ddc97;
+      margin-bottom: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+      gap: 30px;
+    }
+    .card {
+      background: #112240;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 8px 30px rgba(61,220,151,0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: default;
+    }
+    .card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 12px 40px rgba(61,220,151,0.5);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 15px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #3ddc97;
+      transition: transform 0.3s ease;
+    }
+    .card:hover img {
+      transform: scale(1.05);
+    }
+    .card-title {
+      font-size: 1.5rem;
+      color: #a5f3d1;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .card-text {
+      color: #b0bec5;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* SECTION POURQUOI */
+    #pourquoi {
+      background: #071724;
+      padding: 80px 0;
+      clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+      margin-bottom: 80px;
+    }
+    #pourquoi .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      max-width: 1100px;
+    }
+    #pourquoi h2 {
+      width: 100%;
+      text-align: center;
+      font-size: 2.5rem;
+      color: #3ddc97;
+      font-weight: 700;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+    }
+    .reason-box {
+      background: #0a2a47;
+      padding: 30px 25px;
+      border-radius: 15px;
+      flex: 1 1 280px;
+      box-shadow: 0 6px 20px rgba(61,220,151,0.3);
+      transition: box-shadow 0.3s ease;
+      cursor: default;
+    }
+    .reason-box:hover {
+      box-shadow: 0 10px 30px rgba(61,220,151,0.6);
+    }
+    .reason-box h3 {
+      color: #7ef2c8;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .reason-box p {
+      color: #a7bbc7;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #041721;
+      text-align: center;
+      padding: 30px 20px;
+      color: #78909c;
+      font-size: 0.9rem;
+      border-top: 1px solid #0c2246;
+    }
+    footer p {
+      margin: 6px 0;
+    }
+    footer .small {
+      margin-top: 15px;
+      color: #37474f;
+      font-style: italic;
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.4rem;
+      }
+      #pourquoi .container {
+        flex-direction: column;
+        gap: 30px;
+      }
+      nav ul {
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="container">
+  <div class="logo">SOVEMAC OYO</div>
+  <nav>
+    <ul>
+      <li><a href="#produits">Produits</a></li>
+      <li><a href="#pourquoi">Pourquoi nous ?</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content container">
+    <h1>Matériaux durables pour bâtir Oyo</h1>
+    <p>Qualité, expertise et confiance — Sovemac Oyo, votre partenaire de construction.</p>
+    <button class="btn-primary" onclick="location.href='#produits'">Découvrir nos produits</button>
+  </div>
+</section>
+
+<section id="produits" class="container">
+  <h2>Nos Produits Vedettes</h2>
+  <div class="cards">
+    <article class="card">
+      <img src="https://via.placeholder.com/400x180/14395b/3ddc97?text=Ciment" alt="Ciment Portland" />
+      <h3 class="card-title">Ciment Portland</h3>
+      <p class="card-text">Sac de 50kg, idéal pour toutes constructions solides et durables.</p>
+    </article>
+    <article class="card">
+      <img src="https://via.placeholder.com/400x180/14395b/3ddc97?text=Briques" alt="Briques rouges" />
+      <h3 class="card-title">Briques rouges</h3>
+      <p class="card-text">Robustes et économiques, parfaites pour bâtir avec confiance.</p>
+    </article>
+    <article class="card">
+      <img src="https://via.placeholder.com/400x180/14395b/3ddc97?text=Fer+%C3%A0+B%C3%A9ton" alt="Fer à béton" />
+      <h3 class="card-title">Fer à béton</h3>
+      <p class="card-text">Barres solides pour renforcer vos structures et assurer la stabilité.</p>
+    </article>
+  </div>
+</section>
+
+<section id="pourquoi">
+  <div class="container">
+    <h2>Pourquoi choisir Sovemac Oyo ?</h2>
+    <div class="reason-box">
+      <h3>Qualité supérieure</h3>
+      <p>Matériaux triés sur le volet, pour garantir durabilité et fiabilité à chaque projet.</p>
+    </div>
+    <div class="reason-box">
+      <h3>Prix attractifs</h3>
+      <p>Nous offrons des tarifs compétitifs sans compromis sur la qualité.</p>
+    </div>
+    <div class="reason-box">
+      <h3>Support dédié</h3>
+      <p>Une équipe experte prête à vous conseiller et assurer la livraison rapide à Oyo.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <p>📍 Quartier Obangui, Oyo - République du Congo</p>
+  <p>☎ +242 06 623 39 11</p>
+  <p>✉ contact@sovemacoyo.com</p>
+  <p class="small">Entreprise de Mr Kouma, acteur majeur dans la construction à Oyo.</p>
+</footer>
+
+</body>
+</html>
