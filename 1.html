@@ -62,7 +62,6 @@
       background: var(--glass-bg);
       backdrop-filter: saturate(180%) blur(12px);
       border-bottom: 1px solid rgba(0,191,166,0.3);
-      padding: 16px 32px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -226,7 +225,7 @@
     .hero-content h1 {
       font-family: 'Merriweather', serif;
       font-weight: 700;
-      font-size: 3.9rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
       letter-spacing: 2.2px;
       line-height: 1.15;
@@ -235,7 +234,6 @@
     .hero-content p {
       font-size: 1.4rem;
       font-weight: 400;
-      margin-bottom: 3rem;
       color: var(--color-text);
     }
     .btn-primary {
@@ -248,7 +246,7 @@
       border: none;
       box-shadow: 0 10px 24px var(--shadow-primary);
       transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
-      font-size: 1.1rem;
+      font-size: 1rem;
       user-select: none;
       user-drag: none;
       -webkit-user-drag: none;
@@ -268,7 +266,7 @@
     }
     #produits h2 {
       text-align: center;
-      font-size: 2.9rem;
+      font-size: 1rem;
       color: var(--color-accent);
       font-weight: 700;
       margin-bottom: 54px;
@@ -345,7 +343,7 @@
     #pourquoi h2 {
       width: 100%;
       text-align: center;
-      font-size: 2.7rem;
+      font-size: 1rem;
       color: var(--color-accent);
       font-weight: 700;
       margin-bottom: 48px;
@@ -370,7 +368,7 @@
     .reason-box h3 {
       color: var(--color-primary);
       font-weight: 700;
-      font-size: 1.4rem;
+      font-size: 1rem;
       margin-bottom: 14px;
       text-transform: uppercase;
       letter-spacing: 1.6px;
@@ -378,7 +376,7 @@
     }
     .reason-box p {
       color: var(--color-text-light);
-      font-size: 1.05rem;
+      font-size: 1rem;
       line-height: 1.6;
       user-select: text;
     }
@@ -390,24 +388,6 @@
       margin: 0 auto;
       user-select: none;
     }
-    #contact h2 {
-      color: var(--color-accent);
-      text-align: center;
-      font-family: 'Merriweather', serif;
-      font-weight: 700;
-      font-size: 2.8rem;
-      margin-bottom: 48px;
-      letter-spacing: 2.4px;
-      text-transform: uppercase;
-      user-select: text;
-    }
-    form {
-      max-width: 520px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
     label {
       color: var(--color-text-light);
       font-weight: 600;
@@ -415,38 +395,9 @@
       margin-bottom: 6px;
       user-select: text;
     }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      padding: 16px 18px;
-      border-radius: var(--border-radius);
-      border: none;
-      background-color: #112f53;
-      color: var(--color-text);
-      font-size: 1rem;
-      font-family: 'Inter', sans-serif;
-      resize: vertical;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    textarea:focus {
-      background-color: #0d223f;
-      box-shadow: 0 0 8px var(--color-primary);
-      outline: none;
-      color: var(--color-text);
-    }
     textarea {
       min-height: 130px;
     }
-    .btn-primary {
-      align-self: center;
-      width: 180px;
-      padding: 16px 0;
-      font-size: 1.15rem;
-      user-select: none;
-    }
-
     /* FOOTER */
     footer {
       background: #061625;
@@ -481,7 +432,7 @@
   <nav>
     <ul id="menu-list">
       <li><a href="pd/cl.html">Produits</a></li>
-      <li><a href="2.html">Pourquoi nous</a></li>
+      <li><a href="2.html">Àpropos</a></li>
       <li><a href="3.html">Contact</a></li>
     </ul>
   </nav>
@@ -492,7 +443,6 @@
   <div class="hero-content">
     <h1>Matériaux durables<br />pour constructions solides</h1>
     <p>Des solutions fiables et écologiques pour vos projets de construction en Afrique.</p>
-    <button class="btn-primary" type="button">Demander un devis</button>
   </div>
 </section>
 
