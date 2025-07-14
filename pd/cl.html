@@ -7,17 +7,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:ital,wght@0,700&1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --color-bg: #0d1b2a;
-      --color-primary: #00bfa6;
-      --color-primary-dark: #008e76;
-      --color-text: #e0e6f0;
-      --color-text-light: #a8bbc9;
-      --color-accent: #62d2a2;
-      --glass-bg: rgba(13,27,42,0.85);
-      --shadow-primary: rgba(0,191,166,0.4);
+      --color-bg: #f0f8ff; /* Très léger bleu / blanc */
+      --color-primary: #1e90ff; /* Bleu plus vif */
+      --color-primary-dark: #104e8b; /* Bleu foncé pour le survol */
+      --color-text: #333333; /* Texte sombre */
+      --color-text-light: #555555; /* Texte gris clair */
+      --color-accent: #0063d4; /* Cyan pour l'accentuation */
+      --glass-bg: rgba(255,255,255,0.85); /* Fond blanc semi-transparent */
+      --shadow-primary: rgba(30,144,255,0.3); /* Ombre bleue */
       --transition: 0.3s ease;
       --border-radius: 12px;
-      --max-width: 1200px;
+      --max-width: 1100px;
     }
 
     * {
@@ -28,11 +28,11 @@
       font-family: 'Inter', sans-serif;
       background-color: var(--color-bg);
       color: var(--color-text);
-      line-height: 1.6;
       min-height: 100vh;
+      line-height: 1.6;
+      padding: 40px 20px 80px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      padding: 40px 20px 80px;
     }
 
     h1, h2 {
